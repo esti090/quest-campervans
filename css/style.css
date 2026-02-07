@@ -1,0 +1,127 @@
+*reset{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ------estilos generales------ */
+
+h1, h2, h3 {
+    text-align: center;
+}
+    
+
+/* ------estilos de header------ */
+
+header{
+    background-color: rgb(31, 156, 123);
+    display:flex;
+    height: 15vh; ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1{
+    color:rgb(254, 224, 185)
+}
+
+nav ul{
+    display:flex;
+    gap: 6px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    background-color: yellowgreen;
+}
+
+.registro a{
+    color: blue;
+    background-color: rgb(254, 224, 185);
+    text-decoration:none;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.activo{
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px 6px black;
+}
+
+
+/* ------main------ */
+
+main{
+    background-color: rgb(254, 224, 185)
+}
+
+.gancho span {
+  font-weight: bold;
+  color: #3D9E67;
+  text-decoration: underline;
+}
+
+.intro {
+  text-align: center;
+}
+
+.imagen-fondo{
+    width: 750px;
+}
+
+.imagen-rutas{
+    width: 350px;
+}
+
+figure img{
+    width: 300px;
+}
+.imagen-pequeña{
+    width: 450px;
+
+}
+
+.productos {
+    color:#3D9E67;
+    text-align: center;
+
+}
+
+.productosdescribe{
+    text-align: center;
+}
+
+.imagen-campers{
+    width: 1200px;
+}
+
+.historias{
+    text-align: center;
+}
+
+/* ------footer------ */
+
+footer{
+    background-color: rgb(31, 156, 123);
+    color: white;
+    display:flex;
+    height:30vh;
+    justify-content: center;;
+}
+
+contenedor-footer{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+

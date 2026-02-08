@@ -4,124 +4,1182 @@
     box-sizing:border-box;
 }
 
+img{
+  max-width: 100%;
+  display: block;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(254, 224, 185);
+  color: #14352C;
+  line-height: 1.5;
+}
+
+/* --------- HEADER --------- */
+header{
+  background-color: rgb(31, 156, 123);
+  min-height: 80px;           /* mejor que height fija */
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+h1{
+  color: rgb(254, 224, 185);
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+/* NAV */
+nav ul{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;           /* si no cabe, baja */
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+  background-color: #CED600;
+  color: #14352C;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+nav ul li a:hover{
+  transform: translateY(-1px);
+  background-color: #ECB23D;
+}
+
+.activo{
+  background-color: #14352C !important;
+  color: white !important;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+}
+
+/* REGISTRO */
+.registro a{
+  color: #14352C;
+  background-color: rgb(254, 224, 185);
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.registro a:hover{
+  background-color: #ECB23D;
+  color: #14352C;
+}
+
+/* --------- MAIN / SECTIONS --------- */
+main{
+  background-color: rgb(254, 224, 185);
+}
+
+/* A todas las secciones: mejor aire */
+main section{
+  padding: 56px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TITULOS */
+main h2{
+  font-size: 34px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+main h3{
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+main p{
+  color: rgba(20,53,44,0.78);
+}
 
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* ------estilos generales------ */
 
-h1, h2, h3 {
-    text-align: center;
+/* Colores Quest */
+:root{
+  --verde-bosque: #25A57E;
+  --verde-fresco: #2C8B36;
+  --lima: #CED600;
+  --oro: #ECB23D;
+  --crema: #FEE6CD;
+  --blanco: #ffffff;
+  --gris: rgba(0,0,0,0.65);
 }
+
     
 
-/* ------estilos de header------ */
+/* ------estilos de HERO PAGE------ */
 
-header{
-    background-color: rgb(31, 156, 123);
-    display:flex;
-    height: 15vh; ;
-    justify-content: space-evenly;
-    align-items: center;
+/* --------- HERO (primer section del main) ---------
+   Sin tocar HTML: apuntamos al primer section */
+main section:first-of-type{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: grid;
+  gap: 20px;
+  justify-items: center;
 }
 
-h1{
-    color:rgb(254, 224, 185)
-}
-
-nav ul{
-    display:flex;
-    gap: 6px;
-}
-
-nav ul li{
-    list-style: none;
-}
-
-nav ul li a{
-    text-decoration: none;
-    background-color: yellowgreen;
-}
-
-.registro a{
-    color: blue;
-    background-color: rgb(254, 224, 185);
-    text-decoration:none;
-    padding: 3px;
-    border-radius: 5px;
-}
-
-.activo{
-    background-color: black;
-    color: white;
-    text-shadow: 1px 1px 6px black;
-}
-
-
-/* ------main------ */
-
-main{
-    background-color: rgb(254, 224, 185)
-}
-
-.gancho span {
-  font-weight: bold;
-  color: #3D9E67;
-  text-decoration: underline;
-}
-
-.intro {
+.gancho{
+  font-size: clamp(30px, 4vw, 48px);
   text-align: center;
+  line-height: 1.1;
 }
 
+.gancho span{
+  font-weight: 900;
+  color: #ECB23D;
+  text-decoration: none;
+  padding: 0 6px;
+  border-bottom: 4px solid rgba(236,178,61,0.7);
+}
+
+.intro{
+  text-align: center;
+  font-size: 16px;
+  max-width: 680px;
+}
+
+/* Imagen hero más “responsive” */
 .imagen-fondo{
-    width: 750px;
+  width: 100%;
+  max-width: 980px;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+/* --------- BENEFICIOS (2º section) ---------
+   Tu HTML tiene: section > h2 + div + div(que contiene 2 div)
+   Vamos a convertir en GRID sin tocar el HTML */
+main section:nth-of-type(2){
+  background: rgba(255,255,255,0.35);
+  border-radius: 18px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.06);
+}
+
+/* los div directos de esa sección */
+main section:nth-of-type(2) > div{
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* Primer beneficio (div directo) como card */
+main section:nth-of-type(2) > div:first-of-type{
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* El segundo bloque (div directo) contiene 2 cards */
+main section:nth-of-type(2) > div:nth-of-type(2){
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Las dos cards interiores */
+main section:nth-of-type(2) > div:nth-of-type(2) > div{
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* Estilo común para las “cards” de beneficios */
+main section:nth-of-type(2) h3{
+  color: #25A57E;
+  text-align: left;
 }
 
 .imagen-rutas{
-    width: 350px;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+  margin: 10px 0 10px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
 }
 
-figure img{
-    width: 300px;
+/* --------- PRODUCTOS (3º section) --------- */
+main section:nth-of-type(3) > div{
+  display: grid;
+  gap: 12px;
+  justify-items: center;
 }
-.imagen-pequeña{
-    width: 450px;
 
-}
-
-.productos {
-    color:#3D9E67;
-    text-align: center;
-
+.productos{
+  color:#25A57E;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
 }
 
 .productosdescribe{
-    text-align: center;
+  text-align: center;
+  max-width: 780px;
 }
 
 .imagen-campers{
-    width: 1200px;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  margin-top: 8px;
 }
 
-.historias{
-    text-align: center;
+/* --------- HISTORIAS (4º section) ---------
+   Tienes 3 div.historias dentro de la section */
+main section:nth-of-type(4){
+  background: rgba(37,165,126,0.08);
+  border-radius: 18px;
+}
+
+main section:nth-of-type(4) > h2{
+  margin-bottom: 26px;
+}
+
+main section:nth-of-type(4){
+  display: grid;
+  gap: 16px;
+}
+
+/* Grid para las tarjetas de historias */
+main section:nth-of-type(4) .historias{
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+main section:nth-of-type(4) .historias h3{
+  color: #ECB23D;
+  margin-bottom: 8px;
+}
+
+/* Hacemos grid real (sin tocar HTML) con selector del section 4:
+   Convertimos sus hijos en layout con CSS */
+main section:nth-of-type(4){
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px){
+  main section:nth-of-type(4){
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+  /* el h2 ocupa toda la fila */
+  main section:nth-of-type(4) > h2{
+    grid-column: 1 / -1;
+  }
+}
+
+/* Cada card (Rutas, Sostenible, Comunidad) */
+main section:nth-of-type(2) > div:first-of-type,
+main section:nth-of-type(2) > div:nth-of-type(2) > div{
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Títulos verdes arriba */
+main section:nth-of-type(2) h3{
+  color: #25A57E;
+  margin-bottom: 14px;
+}
+
+/* Imagen centrada */
+.imagen-rutas{
+  width: 100%;
+  max-width: 320px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+/* Texto debajo */
+main section:nth-of-type(2) p{
+  margin: 0;
+  color: rgba(20,53,44,0.75);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  main section:nth-of-type(2){
+    grid-template-columns: 1fr;
+  }
+
+  /* en móvil no hace falta contents */
+  main section:nth-of-type(2) > div:nth-of-type(2){
+    display: block;
+  }
+}
+
+/* ------estilos de comunidad------ */
+main section:first-of-type figure{
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+main section:first-of-type figure img{
+  width: 220px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+main section:first-of-type figure figcaption{
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: rgba(20,53,44,0.8);
+}
+
+main section:nth-of-type(2) > div{
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.08);
+  padding: 20px;
+  margin: 22px auto;
+  max-width: 1050px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+/* Imagen grande centrada dentro de cada card */
+main section:nth-of-type(2) > div .imagen-pequeña{
+  width: 100%;
+  max-width: 900px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+
+/* Títulos (Urban / Pioneer / Sky) centrados y consistentes */
+main section:nth-of-type(2) > div h3{
+  color: #25A57E;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* Texto dentro de cards */
+main section:nth-of-type(2) > div p{
+  margin: 0;
+  max-width: 75ch;
+  color: rgba(20,53,44,0.78);
+}
+
+/* Precio */
+main section:nth-of-type(2) > div h4{
+  margin-top: 8px;
+  font-weight: 900;
+  color: #14352C;
+}
+
+/* ------estilos de planificador------ */
+
+
+.hero-planificador{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  margin: 30px auto;
+  width: min(1100px, 95%);
+  min-height: 420px;
+
+  background-image: url("../img/planificador\ hero.png");
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+/* overlay para que el texto se lea */
+.hero-planificador::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)
+  );
+  z-index: 0;
+}
+
+.hero-texto{
+  position: relative;
+  z-index: 1;
+
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-texto h1{
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--crema);
+}
+
+.hero-texto p{
+  max-width: 55ch;
+  opacity: 1;
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-imagen{
+  display: none;
+}
+
+.seccion-planificador{
+  margin: 50px auto;
+  text-align: center;
+  width: min(1100px, 95%);
+}
+
+.texto-pequeno{
+  color: rgba(20,53,44,0.75);
+  margin-top: 6px;
+}
+
+.barra-filtros{
+  margin: 18px auto 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: min(1000px, 95%);
+  flex-wrap: wrap;
+}
+
+.pestanas{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pestana{
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.75);
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pestana.activa{
+  background: rgba(236,178,61,0.25);
+  border-color: rgba(236,178,61,0.35);
+}
+
+.selector-mapa select{
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.75);
+  font-weight: 700;
+}
+
+.contenedor-mapa{
+  width: min(1000px, 95%);
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.6);
+}
+
+.mapa-grande{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.fila-tarjetas{
+  width: min(1000px, 95%);
+  margin: 0 auto;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tarjeta-ruta,
+.tarjeta-extra{
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 14px;
+  width: 310px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imagen-tarjeta{
+  border-radius: 14px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.seccion-suave{
+  background: rgba(254,230,205,0.55);
+  border-radius: 22px;
+  padding: 22px 0;
+  width: min(1100px, 95%);
+  margin: 40px auto;
+}
+
+.cta-final{
+  background: rgba(254,230,205,0.6);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 22px;
+  padding: 26px 18px;
+  text-align: center;
+  width: min(1100px, 95%);
+  margin: 40px auto;
+}
+
+.boton{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.boton-principal{
+  background: var(--verde-bosque);
+  color: white;
+}
+
+.boton-secundario{
+  background: rgba(37,165,126,0.12);
+  color: #0d3a2b;
+  border: 1px solid rgba(37,165,126,0.22);
+}
+
+.oculto{
+  position: absolute;
+  left: -9999px;
+}
+
+@media (max-width: 860px){
+  .hero-planificador{
+    min-height: 360px;
+  }
+}
+
+/* ------estilos de comunidad------ */
+.hero-comunidad {
+  background: linear-gradient(180deg, rgba(37,165,126,0.85), rgba(37,165,126,0.55));
+  padding: 60px 20px;
+  text-align: left;
+  color: white;
+  position: relative;
+
+  background-image: url("../img/comunidad_quest.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-comunidad h2 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-comunidad p {
+  font-size: 18px;
+  max-width: 650px;
+  opacity: 0.95;
+  margin-bottom: 25px;
+}
+
+.hero-comunidad figure {
+  margin-top: 25px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(255, 252, 252, 0.15);
+}
+
+/* =========================
+   MENU INTERNO
+   ========================= */
+.menu-comunidad {
+  background: rgba(255, 255, 255, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+}
+
+.menu-comunidad ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 12px 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-comunidad a {
+  text-decoration: none;
+  color: #14352C;
+  font-weight: 800;
+  padding: 8px 14px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.menu-comunidad a:hover {
+  background-color: rgba(37,165,126,0.12);
+  color: #25A57E;
+}
+
+/* =========================
+   SECCIONES GENERALES
+   ========================= */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #14352C;
+}
+
+section p {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 30px auto;
+  color: #d89d2f;
+  font-size: 16px;
+}
+
+/* =========================
+   FOROS
+   ========================= */
+.lista-foros {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.foro {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  border: 1px solid rgba(20,53,44,0.08);
+  transition: 0.2s;
+}
+
+.foro:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+.foro h3 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #25A57E;
+}
+
+.foro p {
+  text-align: left;
+  margin: 0;
+  font-size: 14px;
+  color: rgba(20,53,44,0.75);
+}
+
+/* =========================
+   CONSEJOS
+   ========================= */
+.filtros-consejos {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filtros-consejos button {
+  background: white;
+  border: 1px solid rgba(20,53,44,0.14);
+  padding: 10px 14px;
+  border-radius: 50px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filtros-consejos button:hover {
+  border-color: rgba(37,165,126,0.45);
+  color: #25A57E;
+  background: rgba(37,165,126,0.08);
+}
+
+.grid-consejos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.consejo {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.consejo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+.consejo img {
+  height: 170px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.consejo h3 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  margin: 14px 14px 8px 14px;
+  font-weight: 800;
+}
+
+.consejo p {
+  text-align: left;
+  margin: 0 14px 12px 14px;
+  font-size: 14px;
+  color: rgba(20,53,44,0.75);
+}
+
+/* =========================
+   BLOG
+   ========================= */
+.articulos-blog {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.articulos-blog article {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  border: 1px solid rgba(20,53,44,0.08);
+}
+
+.articulos-blog h3 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #25A57E;
+}
+
+.articulos-blog p {
+  text-align: left;
+  margin: 0;
+}
+
+.suscripcion-blog {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.suscripcion-blog label {
+  width: 100%;
+  font-weight: 900;
+  text-align: center;
+  color: #14352C;
+}
+
+.suscripcion-blog input {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(20,53,44,0.18);
+  outline: none;
+}
+
+.suscripcion-blog button {
+  background: #ECB23D;
+  border: none;
+  color: white;
+  font-weight: 900;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.suscripcion-blog button:hover {
+  background: #d89d2f;
+}
+
+/* =========================
+   GALERIA
+   ========================= */
+.galeria-fotos {
+  max-width: 1100px;
+  margin: 0 auto 15px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.galeria-fotos img {
+  border-radius: 14px;
+  height: 170px;
+  object-fit: cover;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.galeria-fotos img:hover {
+  transform: scale(1.02);
+}
+
+.hashtag {
+  text-align: center;
+  font-weight: 900;
+  color: #14352C;
+}
+
+/* =========================
+   EVENTOS
+   ========================= */
+.lista-eventos {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.evento {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  border: 1px solid rgba(20,53,44,0.08);
+}
+
+.evento h3 {
+  font-family: "Poppins", Arial, sans-serif;
+  color: #25A57E;
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.evento p {
+  text-align: left;
+  margin: 0;
+}
+
+.registro-evento {
+  max-width: 560px;
+  margin: 0 auto;
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  display: grid;
+  gap: 10px;
+}
+
+.registro-evento h3 {
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 900;
+}
+
+.registro-evento input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(20,53,44,0.18);
+}
+
+.registro-evento button {
+  background: #25A57E;
+  border: none;
+  color: white;
+  font-weight: 900;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.registro-evento button:hover {
+  background: #1f8d6a;
+}
+
+/* =========================
+   REGISTRO COMUNIDAD
+   ========================= */
+.registro-comunidad {
+  background: rgba(37,165,126,0.08);
+}
+
+.registro-comunidad form {
+  max-width: 560px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  display: grid;
+  gap: 10px;
+}
+
+.registro-comunidad input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(20,53,44,0.18);
+}
+
+.registro-comunidad button {
+  background: #ECB23D;
+  border: none;
+  color: white;
+  font-weight: 900;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.registro-comunidad button:hover {
+  background: #d89d2f;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1100px) {
+  .lista-foros {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .galeria-fotos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-comunidad h2 {
+    font-size: 36px;
+  }
+
+  .lista-foros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-consejos {
+    grid-template-columns: 1fr;
+  }
+
+  .articulos-blog {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-fotos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lista-eventos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-foros {
+    grid-template-columns: 1fr;
+  }
+  .galeria-fotos {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ------footer------ */
 
 footer{
-    background-color: rgb(31, 156, 123);
-    color: white;
-    display:flex;
-    height:30vh;
-    justify-content: center;;
+  background-color: rgb(31, 156, 123);
+  color: white;
+  padding: 30px 20px;
+  display: grid;
+  gap: 18px;
 }
 
-contenedor-footer{
-    display:flex;
-    justify-content: space-evenly;
+/* Cada bloque del footer */
+footer > div{
+  background: rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 14px;
 }
 
+/* listas footer */
+footer ul{
+  list-style: none;
+  margin-top: 8px;
+  display: grid;
+  gap: 6px;
+}
+
+/* OJO: tu CSS tenía "contenedor-footer" sin punto -> no aplicaba.
+   Lo corregimos SIN CAMBIAR HTML: existe class="contenedor-footer" */
+.contenedor-footer{
+  display: grid;
+  gap: 6px;
+}
+
+.lista-footer{
+  display: grid;
+  gap: 6px;
+}
+
+/* copyright */
+.copyright{
+  background: transparent;
+  text-align: center;
+  padding: 0;
+}
+
+.copyright p{
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+/* Footer responsive en columnas */
+@media (min-width: 900px){
+  footer{
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+  }
+  .copyright{
+    grid-column: 1 / -1;
+  }
+}
+
+/* --------- MEDIA QUERIES GENERALES --------- */
+@media (max-width: 900px){
+  /* Beneficios: 2 cards a 1 columna */
+  main section:nth-of-type(2) > div:nth-of-type(2){
+    grid-template-columns: 1fr;
+  }
+
+  header{
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .registro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px){
+  main h2{
+    font-size: 28px;
+  }
+
+  nav ul{
+    gap: 8px;
+  }
+
+  nav ul li a{
+    padding: 8px 10px;
+    border-radius: 12px;
+  }
+
+  main section{
+    padding: 42px 16px;
+  }
+}
 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+         <h1>Quest Campervans</h1>
+        
+            <nav>
+
+    <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="alquilar_camper.html">Alquilar Camper</a></li>
+        <li><a href="#" class="activo">Planificador</a></li>
+        <li><a href="comunidad.html">Comunidad</a></li>
+        <li><a href="siempre_contigo.html">Siempre contigo</a></li>
+       
+    </ul>
+   </nav>
+
+   <div class="registro">
+   <a href="#"> Registrarse </a> 
+   </div>
+        
+    </header>
+
+    <main>
+        <!-- HERO -->
+    <section class="hero-planificador">
+
+        <div class="hero-texto">
+            <h1>Planifica tu viaje soñado</h1>
+            <p>Rutas a medida, herramientas útiles y consejos prácticos para una aventura 100% tuya.</p>
+
+            <a href="#ruta-ideal" class="boton boton-principal">Comenzar ahora</a>
+        </div>
+
+        <div class="hero-imagen">
+            <!-- Cambia esta imagen por tu hero -->
+            <img src="../img/planificador hero.png" alt="Campervan al atardecer con vistas a un valle">
+        </div>
+
+    </section>
+
+
+    <!-- ENCUENTRA LA RUTA IDEAL -->
+    <section class="seccion-planificador" id="ruta-ideal">
+
+        <h2>Encuentra la ruta ideal</h2>
+        <p class="texto-pequeno">Compara tu destino para tu aventura y descubre rutas que encajan contigo.</p>
+
+        <!-- FILTROS -->
+        <div class="barra-filtros">
+
+            <div class="pestanas">
+                <button class="pestana activa" type="button">Todos</button>
+                <button class="pestana" type="button">Eléctricas</button>
+                <button class="pestana" type="button">+Híbridas</button>
+                <button class="pestana" type="button">Personalizadas</button>
+            </div>
+
+            <div class="selector-mapa">
+                <label for="mapa" class="oculto">Mapa</label>
+                <select id="mapa">
+                    <option>Map de España</option>
+                    <option>Portugal</option>
+                    <option>Francia</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- MAPA GRANDE -->
+        <div class="contenedor-mapa">
+            <!-- Si luego lo haces real, aquí iría tu mapa interactivo -->
+            <img src="../img/mapa_!.png" alt="Mapa de España" class="mapa-grande">
+        </div>
+
+        <!-- CARDS RUTAS -->
+        <div class="fila-tarjetas">
+
+            <article class="tarjeta-ruta">
+                <h3>Pirineos</h3>
+                <img src="../img/pirineos.jpg" alt="Pirineos" class="imagen-tarjeta">
+                <h4>Mapa interactivo</h4>
+                <p>Tienda, sacos, linternas...</p>
+                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
+            </article>
+
+            <article class="tarjeta-ruta">
+                <h3>Ruta del Císter</h3>
+                <img src="../img/ruta_cister.jpg" alt="Ruta del Císter" class="imagen-tarjeta">
+                <h4>Itinerarios sostenibles</h4>
+                <p>Bicicletas, tablas de surf, senderismo</p>
+                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
+            </article>
+
+            <article class="tarjeta-ruta">
+                <h3>Personalizadas</h3>
+                <img src="../img/personalizado.jpg" alt="Lugares destacados" class="imagen-tarjeta">
+                <h4>Lugares destacados</h4>
+                <p>Miradores, cascadas, playas escondidas...</p>
+                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- AVENTURA SOSTENIBLE -->
+    <section class="seccion-planificador seccion-suave">
+
+        <h2>Súmate a la aventura sostenible</h2>
+        <p class="texto-pequeno">Opciones que cuidan el planeta sin complicarte el viaje.</p>
+
+        <div class="fila-tarjetas">
+
+            <article class="tarjeta-extra">
+                <img src="../img/camper_electrica_hibrida.jpg" alt="Campers eléctricas o híbridas" class="imagen-tarjeta">
+                <h3>Campers eléctricas o híbridas</h3>
+                <p>Tienda, sacos, linternas, etc.</p>
+                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
+            </article>
+
+            <article class="tarjeta-extra">
+                <img src="../img/extras.jpg" alt="Material deportivo" class="imagen-tarjeta">
+                <h3>Material deportivo</h3>
+                <p>Extras para tu ruta: bici, surf, senderismo...</p>
+                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
+            </article>
+
+            <article class="tarjeta-extra">
+                <img src="../img/plantar.jpg" alt="Reduce tu huella y planta un árbol" class="imagen-tarjeta">
+                <h3>Reduce tu huella y planta un árbol</h3>
+                <p>Campervans eléctricas +1 árbol por reserva.</p>
+                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <h2>¿Todo listo para tu próxima aventura?</h2>
+        <p>Vamos a trazar la ruta perfecta para ti.</p>
+        <a href="#ruta-ideal" class="boton boton-principal">Comenzar ahora →</a>
+    </section>
+
+        
+    </main>
+
+  <footer>
+
+    <div>
+
+        <h4>Descubre</h4>
+
+        <ul class="contenedor-footer">
+            <li>Nuestra flota</li>
+            <li>Planificador de rutas</li>
+            <li>Sostenibilidad</li>
+            <li>Kits y extras</li>
+            <li>Gift cards</li>
+        </ul>
+
+    </div>
+
+    <div>
+        <h4>Comunidad</h4>
+
+        <ul class="lista-footer">
+            <li>Foro de viajeros</li>
+            <li>Historias destacadas</li>
+            <li>Mapa de viajeros</li>
+            <li>Eventos Quest</li>
+        </ul>
+
+    </div>
+
+        <div>
+        <h4>Ayuda</h4>
+
+        <ul class="lista-footer">
+            <li>Preguntas frecuentes</li>
+            <li>Contacto</li>
+            <li>Cancelaciones</li>
+            <li>Seguros</li>
+        </ul>
+
+    </div>
+
+    </div>
+
+        <div>
+        <h4>Siempre contigo</h4>
+        <p>Estamos aqui para ayudarte en cada paso de tu aventura</p>
+
+        <ul class="lista lista-footer">
+            <li>+34 123 456 789</li>
+            <li>hola@questcampervans.com</li>
+        </ul>
+
+    </div>
+    <div class="copyright"> 
+    <p>© 2025 Quest Campervans. Nos importa tu privacidad tanto como el planeta.</p>
+    </div>
+
+</footer>
+    
+</body>
+</html>

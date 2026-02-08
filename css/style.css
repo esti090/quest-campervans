@@ -174,9 +174,7 @@ main section:first-of-type{
   box-shadow: 0 14px 30px rgba(0,0,0,0.12);
 }
 
-/* --------- BENEFICIOS (2º section) ---------
-   Tu HTML tiene: section > h2 + div + div(que contiene 2 div)
-   Vamos a convertir en GRID sin tocar el HTML */
+/* --------- BENEFICIOS (2º section) ---------*/
 main section:nth-of-type(2){
   background: rgba(255,255,255,0.35);
   border-radius: 18px;
@@ -252,8 +250,7 @@ main section:nth-of-type(3) > div{
   margin-top: 8px;
 }
 
-/* --------- HISTORIAS (4º section) ---------
-   Tienes 3 div.historias dentro de la section */
+/* --------- HISTORIAS (4º section) --------- */
 main section:nth-of-type(4){
   background: rgba(37,165,126,0.08);
   border-radius: 18px;
@@ -1109,8 +1106,7 @@ footer ul{
   gap: 6px;
 }
 
-/* OJO: tu CSS tenía "contenedor-footer" sin punto -> no aplicaba.
-   Lo corregimos SIN CAMBIAR HTML: existe class="contenedor-footer" */
+
 .contenedor-footer{
   display: grid;
   gap: 6px;

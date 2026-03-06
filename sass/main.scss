@@ -1,0 +1,18 @@
+
+// utilities (primero siempre)
+@use 'utilities/variables';    
+@use 'utilities/mixins';       
+
+// base
+@use 'base/reset';             
+@use 'base/tipografias';       
+
+// layout
+@use 'layout/header';          
+@use 'layout/main-index';       
+@use 'layout/mediaqueries';     
+
+// components
+@use 'components/cajas-generales';  
+
+

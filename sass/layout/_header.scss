@@ -1,0 +1,55 @@
+header {
+  background-color: $bg-header;
+  min-height: 80px;
+  padding: 16px 20px;
+  @include flex-valores(center, space-between);
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  h1 {
+    color: $title-color;
+    font-size: 22px;
+    white-space: nowrap;
+  }
+
+  nav {
+    ul {
+      @include flex-valores(center, center);
+      gap: 10px;
+      flex-wrap: wrap;
+      list-style: none;
+
+      li {
+        a {
+          @include nav-links($bg-nav, $text-primary, $color-accent);
+        }
+      }
+    }
+  }
+
+  .activo {
+    background-color: $text-primary !important;
+    color: white !important;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  }
+
+  .registro {
+    a {
+      color: $text-primary;
+      background-color: $title-color;
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: 0.2s;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $color-accent;
+        color: $text-primary;
+      }
+    }
+  }
+}

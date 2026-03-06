@@ -1,0 +1,33 @@
+
+
+// MIXIN 1: Para enlaces de navegación
+@mixin nav-links($bg-color, $text-color, $hover-color) {
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: 0.2s;
+  display: inline-block;
+  background-color: $bg-color;
+  color: $text-color;
+  
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// MIXIN 2: Para flexbox
+@mixin flex-valores($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// MIXIN 3: Para tarjetas
+@mixin card-styles($padding: 18px, $bg-color: white, $shadow-intensity: 0.08) {
+  background: $bg-color;
+  border-radius: 16px;
+  padding: $padding;
+  box-shadow: 0 10px 22px rgba(0,0,0,$shadow-intensity);
+  transition: 0.2s;
+}

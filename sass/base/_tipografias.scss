@@ -1,0 +1,18 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: $title-color;
+  color: $text-primary;
+  line-height: 1.5;
+}
+
+// Fuentes específicas para comunidad
+.hero-comunidad h2,
+.menu-comunidad a,
+section h2,
+.foro h3,
+.consejo h3,
+.evento h3,
+.articulos-blog h3,
+.registro-evento h3 {
+  font-family: "Poppins", Arial, sans-serif;
+}

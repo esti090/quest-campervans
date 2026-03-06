@@ -1,0 +1,439 @@
+main {
+  background-color: $title-color;
+
+  section {
+    padding: 56px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 34px;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: rgba(20,53,44,0.78);
+    }
+
+    // HERO (primer section)
+    &:first-of-type {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      display: grid;
+      gap: 20px;
+      justify-items: center;
+
+      figure {
+        @include flex-valores(center, center);
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+
+        img {
+          width: 220px;
+          height: auto;
+          border-radius: 14px;
+        }
+
+        figcaption {
+          width: 100%;
+          text-align: center;
+          font-weight: 900;
+          margin-bottom: 12px;
+          color: rgba(20,53,44,0.8);
+        }
+      }
+    }
+
+    // BENEFICIOS (2º section)
+    &:nth-of-type(2) {
+      background: rgba(255,255,255,0.35);
+      border-radius: 18px;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.06);
+
+      > div {
+        display: grid;
+        gap: 18px;
+        margin-top: 18px;
+
+        &:first-of-type,
+        &:nth-of-type(2) > div {
+          // Las cards están en _cajas-generales.scss
+        }
+
+        &:nth-of-type(2) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      h3 {
+        color: $color-quest;
+        text-align: left;
+        margin-bottom: 14px;
+      }
+
+      .imagen-rutas {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 14px;
+        margin-bottom: 14px;
+      }
+
+      p {
+        margin: 0;
+        color: rgba(20,53,44,0.75);
+      }
+    }
+
+    // PRODUCTOS (3º section)
+    &:nth-of-type(3) {
+      > div {
+        display: grid;
+        gap: 12px;
+        justify-items: center;
+      }
+
+      .productos {
+        color: $color-quest;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 900;
+      }
+
+      .productosdescribe {
+        text-align: center;
+        max-width: 780px;
+      }
+
+      .imagen-campers {
+        width: 100%;
+        max-width: 1100px;
+        border-radius: 18px;
+        box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+        margin-top: 8px;
+      }
+    }
+
+    // HISTORIAS (4º section)
+    &:nth-of-type(4) {
+      background: $bg-benefits;
+      border-radius: 18px;
+      display: grid;
+      gap: 16px;
+
+      > h2 {
+        margin-bottom: 26px;
+      }
+
+      .historias {
+        // Estilos en _cajas-generales.scss
+      }
+    }
+  }
+
+  // SECCIÓN COMUNIDAD (estilos específicos)
+  section:first-of-type {
+    figure {
+      @include flex-valores(center, center);
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+
+      img {
+        width: 220px;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      figcaption {
+        width: 100%;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 12px;
+        color: rgba(20,53,44,0.8);
+      }
+    }
+  }
+
+  section:nth-of-type(2) {
+    > div {
+      margin: 22px auto;
+      max-width: 1050px;
+      @include flex-valores(center, center);
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+
+      .imagen-pequeña {
+        width: 100%;
+        max-width: 900px;
+        border-radius: 16px;
+      }
+
+      h3 {
+        color: $color-quest;
+        margin: 0;
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      p {
+        margin: 0;
+        max-width: 75ch;
+        color: rgba(20,53,44,0.78);
+      }
+
+      h4 {
+        margin-top: 8px;
+        font-weight: 900;
+        color: $text-primary;
+      }
+    }
+  }
+}
+
+// HERO PLANIFICADOR
+.hero-planificador {
+  position: relative;
+  @include flex-valores(center, center);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 30px auto;
+  width: min(1100px, 95%);
+  min-height: 420px;
+  background-image: url("../img/planificador hero.png");
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55));
+    z-index: 0;
+  }
+
+  .hero-texto {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+    color: white;
+    @include flex-valores(center, center);
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+
+    h1 {
+      font-size: clamp(32px, 4vw, 48px);
+      color: $title-color;
+    }
+
+    p {
+      max-width: 55ch;
+      opacity: 1;
+      color: rgba(255,255,255,0.9);
+    }
+  }
+
+  .hero-imagen {
+    display: none;
+  }
+}
+
+.seccion-planificador {
+  margin: 50px auto;
+  text-align: center;
+  width: min(1100px, 95%);
+}
+
+.barra-filtros {
+  margin: 18px auto 16px;
+  @include flex-valores(center, center);
+  gap: 12px;
+  width: min(1000px, 95%);
+  flex-wrap: wrap;
+}
+
+.pestanas {
+  @include flex-valores(center, center);
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fila-tarjetas {
+  width: min(1000px, 95%);
+  margin: 0 auto;
+  @include flex-valores(center, center);
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+// HERO COMUNIDAD
+.hero-comunidad {
+  background: linear-gradient(180deg, rgba($color-quest, 0.85), rgba($color-quest, 0.55)), url("../img/comunidad_quest.png") center/cover;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: white;
+  position: relative;
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  figure {
+    margin-top: 25px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+}
+
+.menu-comunidad {
+  background: rgba(255, 255, 255, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  padding: 12px 0;
+
+  ul {
+    @include flex-valores(center, center);
+    gap: 20px;
+    list-style: none;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    li a {
+      text-decoration: none;
+      color: $text-primary;
+      font-weight: 800;
+      padding: 8px 14px;
+      border-radius: 50px;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: rgba($color-quest, 0.12);
+        color: $color-quest;
+      }
+    }
+  }
+}
+
+section {
+  padding: 60px 20px;
+
+  h2 {
+    font-size: 34px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $text-primary;
+  }
+
+  p {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 30px auto;
+    color: #d89d2f;
+    font-size: 16px;
+  }
+}
+
+// GRIDS DE COMUNIDAD
+.lista-foros {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-consejos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.articulos-blog {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.lista-eventos {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+// FOOTER
+footer {
+  background-color: $bg-header;
+  color: white;
+  padding: 30px 20px;
+  display: grid;
+  gap: 18px;
+
+  > div {
+    background: rgba(0,0,0,0.06);
+    border-radius: 14px;
+    padding: 14px;
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 8px;
+    display: grid;
+    gap: 6px;
+  }
+}
+
+.contenedor-footer {
+  display: grid;
+  gap: 6px;
+}
+
+.lista-footer {
+  display: grid;
+  gap: 6px;
+}
+
+.copyright {
+  background: transparent;
+  text-align: center;
+  padding: 0;
+
+  p {
+    opacity: 0.9;
+    font-weight: 700;
+  }
+}

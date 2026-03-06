@@ -1,0 +1,446 @@
+img {
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.imagen-campers {
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.hero-planificador {
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+.hero-comunidad figure {
+  box-shadow: 0 12px 30px rgba(255, 252, 252, 0.15);
+}
+
+// ========================================
+// CARDS
+// ========================================
+
+// Card genérica
+.card {
+  @include card-styles(18px, white, 0.08);
+}
+
+// Cards de beneficios
+.card-beneficio {
+  @include card-styles(20px, white, 0.08);
+  @include flex-valores(center, center);
+  flex-direction: column;
+  text-align: center;
+}
+
+
+// ANIMACIONES AÑADIDAS
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba($color-quest, 0.2);
+    
+    h3 {
+      color: $color-accent; // El título cambia a naranja
+    }
+  }
+
+// Cards de historias
+.card-historia {
+  @include card-styles(18px, white, 0.08);
+  text-align: left;
+
+  h3 {
+    color: $color-accent;
+    margin-bottom: 8px;
+  }
+}
+
+// Cards de foros
+.card-foro {
+  @include card-styles(18px, white, 0.08);
+  border: 1px solid rgba($text-primary, 0.08);
+
+  h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: $color-quest;
+  }
+
+  p {
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+    color: rgba($text-primary, 0.75);
+  }
+}
+
+// Cards de consejos
+.card-consejo {
+  @include card-styles(0, white, 0.08);
+  overflow: hidden;
+
+  img {
+    height: 170px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 14px 14px 8px 14px;
+    font-weight: 800;
+  }
+
+  p {
+    text-align: left;
+    margin: 0 14px 12px 14px;
+    font-size: 14px;
+    color: rgba($text-primary, 0.75);
+  }
+}
+
+// Cards de eventos
+.card-evento {
+  @include card-styles(18px, white, 0.08);
+  border: 1px solid rgba($text-primary, 0.08);
+
+  h3 {
+    color: $color-quest;
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-weight: 800;
+  }
+
+  p {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+// Cards de artículos blog
+.card-articulo {
+  @include card-styles(18px, white, 0.08);
+  border: 1px solid rgba($text-primary, 0.08);
+
+  h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: $color-quest;
+  }
+
+  p {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+// Cards de rutas y extras (planificador)
+.card-ruta,
+.card-extra {
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 14px;
+  width: 310px;
+  text-align: left;
+  @include flex-valores(flex-start, flex-start);
+  flex-direction: column;
+  gap: 10px;
+
+  .imagen-tarjeta {
+    border-radius: 14px;
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+// ========================================
+// BOTONES
+// ========================================
+
+.boton {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: 0.2s;
+  cursor: pointer;
+  border: none;
+
+  &-principal {
+    background: $color-quest;
+    color: white;
+
+    &:hover {
+      background: darken($color-quest, 10%);
+    }
+  }
+
+  &-secundario {
+    background: rgba($color-quest, 0.12);
+    color: #0d3a2b;
+    border: 1px solid rgba($color-quest, 0.22);
+
+    &:hover {
+      background: rgba($color-quest, 0.22);
+    }
+  }
+
+  &-acento {
+    background: $color-accent;
+    color: white;
+
+    &:hover {
+      background: darken($color-accent, 10%);
+    }
+  }
+
+  &-filtro {
+    background: white;
+    border: 1px solid rgba($text-primary, 0.14);
+    padding: 10px 14px;
+    border-radius: 50px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      border-color: rgba($color-quest, 0.45);
+      color: $color-quest;
+      background: rgba($color-quest, 0.08);
+    }
+  }
+}
+
+// ========================================
+// FORMULARIOS
+// ========================================
+
+// Campos de entrada
+.campo-input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid $border-input;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+
+  &:focus {
+    border-color: $color-quest;
+  }
+}
+
+// Etiquetas
+.etiqueta {
+  font-weight: 900;
+  color: $text-primary;
+  display: block;
+  margin-bottom: 4px;
+}
+
+// Formulario de suscripción blog
+.form-suscripcion {
+  max-width: 520px;
+  margin: 0 auto;
+  @include flex-valores(center, center);
+  gap: 10px;
+  flex-wrap: wrap;
+  @include card-styles(18px, white, 0.08);
+
+  label {
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+    color: $text-primary;
+  }
+
+  input {
+    flex: 1;
+    min-width: 220px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid $border-input;
+    outline: none;
+  }
+
+  button {
+    background: $color-accent;
+    border: none;
+    color: white;
+    font-weight: 900;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: darken($color-accent, 10%);
+    }
+  }
+}
+
+// Formulario de registro evento
+.form-evento {
+  max-width: 560px;
+  margin: 0 auto;
+  @include card-styles(18px, white, 0.08);
+  display: grid;
+  gap: 10px;
+
+  h3 {
+    text-align: center;
+    font-weight: 900;
+  }
+
+  input {
+    @extend .campo-input;
+  }
+
+  button {
+    background: $color-quest;
+    border: none;
+    color: white;
+    font-weight: 900;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: darken($color-quest, 10%);
+    }
+  }
+}
+
+// Formulario de registro comunidad
+.form-registro-comunidad {
+  max-width: 560px;
+  margin: 0 auto;
+  @include card-styles(20px, white, 0.08);
+  display: grid;
+  gap: 10px;
+
+  input {
+    @extend .campo-input;
+  }
+
+  button {
+    background: $color-accent;
+    border: none;
+    color: white;
+    font-weight: 900;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: darken($color-accent, 10%);
+    }
+  }
+}
+
+// ========================================
+// ELEMENTOS DE PLANIFICADOR
+// ========================================
+
+.pestana {
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.75);
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &.activa {
+    background: rgba($color-accent, 0.25);
+    border-color: rgba($color-accent, 0.35);
+  }
+}
+
+.selector-mapa select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.75);
+  font-weight: 700;
+}
+
+.contenedor-mapa {
+  width: min(1000px, 95%);
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.6);
+
+  .mapa-grande {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+}
+
+// ========================================
+// GALERÍA
+// ========================================
+
+.galeria-fotos {
+  max-width: 1100px;
+  margin: 0 auto 15px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+
+  img {
+    border-radius: 14px;
+    height: 170px;
+    object-fit: cover;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.hashtag {
+  text-align: center;
+  font-weight: 900;
+  color: $text-primary;
+}
+
+// ========================================
+// SECCIONES REUTILIZABLES
+// ========================================
+
+.seccion-suave {
+  background: rgba($title-color, 0.55);
+  border-radius: 22px;
+  padding: 22px 0;
+  width: min(1100px, 95%);
+  margin: 40px auto;
+}
+
+.cta-final {
+  background: rgba($title-color, 0.6);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 22px;
+  padding: 26px 18px;
+  text-align: center;
+  width: min(1100px, 95%);
+  margin: 40px auto;
+}
+
+.oculto {
+  position: absolute;
+  left: -9999px;
+}
+
+.texto-pequeno {
+  color: rgba(20,53,44,0.75);
+  margin-top: 6px;
+}

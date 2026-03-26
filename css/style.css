@@ -1032,3 +1032,109 @@ footer li {
   height: 220px;
   object-fit: cover;
 }
+
+  SIEMPRE CONTIGO
+========================================= 
+
+.pagina-siempre-contigo .hero-formulario h2 {
+  color: #14352C;
+  margin-bottom: 10px;
+}
+
+.pagina-siempre-contigo .subtitulo-formulario {
+  max-width: 650px;
+  margin: 0 auto;
+  color: rgba(20, 53, 44, 0.78);
+}
+
+.pagina-siempre-contigo .formulario-quest {
+  margin-top: 10px;
+}
+
+.pagina-siempre-contigo .bloque-formulario {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(20, 53, 44, 0.08);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.pagina-siempre-contigo fieldset.bloque-formulario {
+  margin: 0;
+}
+
+.pagina-siempre-contigo .bloque-formulario legend {
+  font-weight: 900;
+  color: #25A57E;
+  font-size: 22px;
+  padding: 0 8px;
+  margin-bottom: 10px;
+}
+
+.pagina-siempre-contigo .form-label {
+  font-weight: 800;
+  color: #14352C;
+}
+
+.pagina-siempre-contigo .form-control {
+  border-radius: 12px;
+  border: 1px solid rgba(20, 53, 44, 0.18);
+  padding: 12px 14px;
+  box-shadow: none;
+}
+
+.pagina-siempre-contigo .form-control:focus {
+  border-color: #25A57E;
+  box-shadow: 0 0 0 0.15rem rgba(37, 165, 126, 0.15);
+}
+
+.pagina-siempre-contigo textarea.form-control {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.pagina-siempre-contigo .opciones-formulario {
+  display: grid;
+  gap: 12px;
+}
+
+.pagina-siempre-contigo .opcion-card {
+  background: rgba(254, 224, 185, 0.45);
+  border: 1px solid rgba(20, 53, 44, 0.08);
+  border-radius: 14px;
+  padding: 14px 16px 14px 38px;
+  margin: 0;
+}
+
+.pagina-siempre-contigo .form-check-input {
+  margin-top: 0.3em;
+}
+
+.pagina-siempre-contigo .form-check-label {
+  font-weight: 700;
+  color: #14352C;
+}
+
+.pagina-siempre-contigo .boton-enviar-quest {
+  background-color: #25A57E;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  padding: 12px 22px;
+}
+
+.pagina-siempre-contigo .boton-enviar-quest:hover {
+  background-color: #1f8d6a;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .pagina-siempre-contigo .bloque-formulario {
+    padding: 18px;
+  }
+
+  .pagina-siempre-contigo .bloque-formulario legend {
+    font-size: 20px;
+  }
+}

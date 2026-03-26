@@ -54,17 +54,22 @@
     </div>
 </header>
 
-<main class="py-5">
+<main class="py-5 pagina-siempre-contigo">
     <section class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <h2 class="text-center mb-4">Reserva tu aventura Quest</h2>
+                
+                <div class="hero-formulario text-center mb-4">
+                    <h2>Reserva tu aventura Quest</h2>
+                    <p class="subtitulo-formulario">
+                        Cuéntanos cómo sueñas tu viaje y encontraremos la camper perfecta para ti.
+                    </p>
+                </div>
 
-                <form class="row g-4">
-                    <!-- DATOS BÁSICOS -->
+                <form class="row g-4 formulario-quest">
                     <div class="col-12">
-                        <fieldset class="border rounded p-4">
-                            <legend class="float-none w-auto px-2">Datos básicos</legend>
+                        <fieldset class="bloque-formulario">
+                            <legend>Datos básicos</legend>
 
                             <div class="row g-3">
                                 <div class="col-12 col-md-6">
@@ -90,59 +95,61 @@
                         </fieldset>
                     </div>
 
-                    <!-- TIPO DE AVENTURA -->
                     <div class="col-12">
-                        <fieldset class="border rounded p-4">
-                            <legend class="float-none w-auto px-2">¿Qué tipo de aventura buscas?</legend>
+                        <fieldset class="bloque-formulario">
+                            <legend>¿Qué tipo de aventura buscas?</legend>
 
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="playa">
-                                <label class="form-check-label" for="playa">Playa y costa</label>
-                            </div>
+                            <div class="opciones-formulario">
+                                <div class="form-check opcion-card">
+                                    <input class="form-check-input" type="checkbox" id="playa">
+                                    <label class="form-check-label" for="playa">Playa y costa</label>
+                                </div>
 
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox" id="montana">
-                                <label class="form-check-label" for="montana">Montaña y naturaleza</label>
-                            </div>
+                                <div class="form-check opcion-card">
+                                    <input class="form-check-input" type="checkbox" id="montana">
+                                    <label class="form-check-label" for="montana">Montaña y naturaleza</label>
+                                </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="urbano">
-                                <label class="form-check-label" for="urbano">Urbano y cultural</label>
+                                <div class="form-check opcion-card">
+                                    <input class="form-check-input" type="checkbox" id="urbano">
+                                    <label class="form-check-label" for="urbano">Urbano y cultural</label>
+                                </div>
                             </div>
                         </fieldset>
                     </div>
 
-                    <!-- CUÁNTOS SOIS -->
                     <div class="col-12">
-                        <fieldset class="border rounded p-4">
-                            <legend class="float-none w-auto px-2">¿Cuántos sois?</legend>
+                        <fieldset class="bloque-formulario">
+                            <legend>¿Cuántos sois?</legend>
 
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="radio" id="uno_radio" name="choose_one">
-                                <label class="form-check-label" for="uno_radio">1 viajero/a</label>
-                            </div>
+                            <div class="opciones-formulario">
+                                <div class="form-check opcion-card">
+                                    <input class="form-check-input" type="radio" id="uno_radio" name="choose_one">
+                                    <label class="form-check-label" for="uno_radio">1 viajero/a</label>
+                                </div>
 
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="radio" id="dos_radio" name="choose_one">
-                                <label class="form-check-label" for="dos_radio">2 viajeros (pareja/amigos)</label>
-                            </div>
+                                <div class="form-check opcion-card">
+                                    <input class="form-check-input" type="radio" id="dos_radio" name="choose_one">
+                                    <label class="form-check-label" for="dos_radio">2 viajeros (pareja/amigos)</label>
+                                </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="tres_radio" name="choose_one">
-                                <label class="form-check-label" for="tres_radio">Familia (3+ personas)</label>
+                                <div class="form-check opcion-card">
+                                    <input class="form-check-input" type="radio" id="tres_radio" name="choose_one">
+                                    <label class="form-check-label" for="tres_radio">Familia (3+ personas)</label>
+                                </div>
                             </div>
                         </fieldset>
                     </div>
 
-                    <!-- MENSAJE -->
                     <div class="col-12">
-                        <label for="mensaje" class="form-label">Cuéntanos más sobre tu aventura</label>
-                        <textarea name="mensaje" id="mensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        <div class="bloque-formulario">
+                            <label for="mensaje" class="form-label">Cuéntanos más sobre tu aventura</label>
+                            <textarea name="mensaje" id="mensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
                     </div>
 
-                    <!-- BOTÓN -->
                     <div class="col-12 text-center">
-                        <input type="submit" class="btn btn-success px-4" value="Enviar solicitud">
+                        <input type="submit" class="btn boton-enviar-quest px-4" value="Enviar solicitud">
                     </div>
                 </form>
             </div>
@@ -204,7 +211,6 @@
     </div>
 </footer>
 
-<!-- Bootstrap JS para menú responsive -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

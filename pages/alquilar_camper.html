@@ -1,30 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alquilar Camper - Quest</title>
-
-    <!-- Bootstrap CSS v5.3.3 -->
+    <!-- Bootstrap CSS v5.3.3 con SRI -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
           rel="stylesheet" 
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
           crossorigin="anonymous">
-
-    <!-- CSS personalizado -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-    <header class="navbar navbar-expand-md navbar-light">
+    <header class="navbar navbar-expand-md navbar-light" style="background-color: rgb(31, 156, 123);">
         <div class="container">
             <h1 class="navbar-brand text-white">Quest Campervans</h1>
             
             <button class="navbar-toggler" type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#mainNav"
-                    aria-controls="mainNav" 
-                    aria-expanded="false" 
+                    data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" 
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,102 +48,56 @@
         </div>
     </header>
 
-    <main class="container py-5">
+    <main>
+        <section> 
+            <h2>Elige tu camper</h2>
 
-        <section class="mb-5"> 
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="mb-4">Elige tu camper</h2>
+            <p>Tu viaje, tu estilo. Elige la campervan que será tu hogar rodante: desde modelos ágiles para una escapada espontánea hasta espacios con todo el confort para una vida nómada. Encuentra la que vibre a tu ritmo.</p>
 
-                    <p class="mx-auto" style="max-width: 850px;">
-                        Tu viaje, tu estilo. Elige la campervan que será tu hogar rodante:
-                        desde modelos ágiles para una escapada espontánea hasta espacios con
-                        todo el confort para una vida nómada. Encuentra la que vibre a tu ritmo.
-                    </p>
+                <figure>
+                    <figcaption>Nuestra flota</figcaption>
+                
+                    <img src="../img/campervan1.png" alt="campervan1">
+                    <img src="../img/perfilada1.png" alt="perfilada1">
+                    <img src="../img/capuchina1.png" alt="capuchina1">
+                    <img src="../img/integral1.png" alt="integral1">
+                
+                </figure>
 
-                    <figure class="mt-4">
-                        <figcaption class="mb-3 fw-bold">Nuestra flota</figcaption>
-
-                        <div class="row g-4 justify-content-center">
-                            <div class="col-6 col-md-3">
-                                <img src="../img/campervan1.png" alt="Campervan modelo 1" class="img-fluid rounded shadow-sm">
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <img src="../img/perfilada1.png" alt="Camper perfilada modelo 1" class="img-fluid rounded shadow-sm">
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <img src="../img/capuchina1.png" alt="Camper capuchina modelo 1" class="img-fluid rounded shadow-sm">
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <img src="../img/integral1.png" alt="Camper integral modelo 1" class="img-fluid rounded shadow-sm">
-                            </div>
-                        </div>
-                    </figure>
-                </div>
-            </div>
         </section>
 
         <section>
-            <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <h2>Encuentra tu Quest ideal</h2>
-                </div>
-            </div>
+        <h2>Encuentra tu Quest ideal</h2>
+        <div>
+            <h3>Urban Nomad</h3>
+            <img src="../img/urban_nomad.png" alt="Promoción"class="imagen-pequeña">
+            <p>Categorías: Urbana | Eléctrica <br> Descripción: Diseño minimalista para nómadas urbanos <br> Capacidad: 2 personas <br> Características: WiFi 5G, cocina de inducción, espacio de trabajo convertible <br> Extras incluidos: Bicicleta plegable eléctrica, guía de ciudades secretas</p>
+            <h4>Precio: Desde 95€/día</h4>
 
-            <div class="row g-4">
-                <div class="col-12 col-lg-4">
-                    <div class="card h-100 p-3">
-                        <h3>Urban Nomad</h3>
-                        <img src="../img/urban_nomad.png" alt="Urban Nomad" class="imagen-pequeña img-fluid rounded mb-3">
-                        <p>
-                            <strong>Categorías:</strong> Urbana | Eléctrica <br>
-                            <strong>Descripción:</strong> Diseño minimalista para nómadas urbanos <br>
-                            <strong>Capacidad:</strong> 2 personas <br>
-                            <strong>Características:</strong> WiFi 5G, cocina de inducción, espacio de trabajo convertible <br>
-                            <strong>Extras incluidos:</strong> Bicicleta plegable eléctrica, guía de ciudades secretas
-                        </p>
-                        <h4>Precio: Desde 95€/día</h4>
-                    </div>
-                </div>
+        </div>
 
-                <div class="col-12 col-lg-4">
-                    <div class="card h-100 p-3">
-                        <h3>Pioneer Eco-Hybrid</h3>
-                        <img src="../img/pioneer.png" alt="Pioneer Eco-Hybrid" class="imagen-pequeña img-fluid rounded mb-3">
-                        <p>
-                            <strong>Categorías:</strong> Todo-terreno | Eco-Híbrida <br>
-                            <strong>Descripción:</strong> Aventura off-road sostenible <br>
-                            <strong>Capacidad:</strong> 2-4 personas <br>
-                            <strong>Características:</strong> Tracción 4x4 híbrida, paneles solares 600W, suspensión elevada <br>
-                            <strong>Extras incluidos:</strong> Equipo off-road básico, filtro de agua, grúa para bicis
-                        </p>
-                        <h4>Precio: Desde 135€/día</h4>
-                    </div>
-                </div>
+          <div>
+            <h3>Pioneer Eco-Hybrid</h3>
+            <img src="../img/pioneer.png" alt="Promoción"class="imagen-pequeña">
+            <p>Categorías: Todo-terreno |  Eco-Híbrida <br> Descripción: Aventura off-road sostenible<br> Capacidad: 2-4 personas<br> Características: Tracción 4x4 híbrida, paneles solares 600W, suspensión elevada. <br>Extras incluidos: Equipo off-road básico, filtro de agua, grúa para bicis</p>
+            <h4>Precio: Desde 135€/día</h4>
 
-                <div class="col-12 col-lg-4">
-                    <div class="card h-100 p-3">
-                        <h3>Sky Chaser</h3>
-                        <img src="../img/sky_chaser.png" alt="Sky Chaser" class="imagen-pequeña img-fluid rounded mb-3">
-                        <p>
-                            <strong>Categorías:</strong> Premium | Eléctrica <br>
-                            <strong>Descripción:</strong> Experiencia de lujo con techo panorámico <br>
-                            <strong>Capacidad:</strong> 2 personas <br>
-                            <strong>Características:</strong> Techo de cristal eléctrico, sonido premium, mini-bar <br>
-                            <strong>Extras incluidos:</strong> Telescopio básico, kit “Noche bajo las estrellas”
-                        </p>
-                        <h4>Precio: Desde 145€/día</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
 
+
+          <div>
+            <h3>Sky chaser</h3>
+            <img src="../img/sky_chaser.png" alt="Promoción"class="imagen-pequeña">
+            <p>Categorías: Premium | Eléctrica <br> Descripción: Experiencia de lujo con techo panorámico <br> Capacidad: 2 personas <br> Características: Techo de cristal eléctrico, sonido premium, mini-bar <br> Extras incluidos: Telescopio básico, kit "Noche bajo las estrellas"</p>
+            <h4>Precio: Desde 145€/día</h4>
+
+        </div>
+
+
+        
     </main>
 
-    <!-- Bootstrap JS: necesario para que funcione el menú responsive -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-
+   c
+    
 </body>
 </html>

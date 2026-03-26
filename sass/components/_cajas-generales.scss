@@ -1,13 +1,13 @@
 img {
-  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
 
 .imagen-campers {
-  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
 .hero-planificador {
-  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
 }
 
 .hero-comunidad figure {
@@ -29,20 +29,17 @@ img {
   @include flex-valores(center, center);
   flex-direction: column;
   text-align: center;
-}
-
-
-// ANIMACIONES AÑADIDAS
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 30px rgba($color-quest, 0.2);
-    
+
     h3 {
-      color: $color-accent; // El título cambia a naranja
+      color: $color-accent;
     }
   }
+}
 
 // Cards de historias
 .card-historia {
@@ -139,11 +136,12 @@ img {
 // Cards de rutas y extras (planificador)
 .card-ruta,
 .card-extra {
-  background: rgba(255,255,255,0.75);
-  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
   padding: 14px;
-  width: 310px;
+  width: 100%;
+  max-width: 310px;
   text-align: left;
   @include flex-valores(flex-start, flex-start);
   flex-direction: column;
@@ -152,6 +150,7 @@ img {
   .imagen-tarjeta {
     border-radius: 14px;
     height: 120px;
+    width: 100%;
     object-fit: cover;
   }
 }
@@ -348,8 +347,8 @@ img {
 // ========================================
 
 .pestana {
-  border: 1px solid rgba(0,0,0,0.08);
-  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.75);
   padding: 10px 12px;
   border-radius: 12px;
   font-weight: 700;
@@ -364,8 +363,8 @@ img {
 .selector-mapa select {
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.75);
   font-weight: 700;
 }
 
@@ -374,8 +373,8 @@ img {
   margin: 0 auto 18px;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
-  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.6);
 
   .mapa-grande {
     width: 100%;
@@ -427,7 +426,7 @@ img {
 
 .cta-final {
   background: rgba($title-color, 0.6);
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 22px;
   padding: 26px 18px;
   text-align: center;
@@ -441,6 +440,6 @@ img {
 }
 
 .texto-pequeno {
-  color: rgba(20,53,44,0.75);
+  color: rgba(20, 53, 44, 0.75);
   margin-top: 6px;
 }

@@ -469,6 +469,7 @@ main section:nth-of-type(2) > div h4 {
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 10px;
+  color: rgb(254, 224, 185);
 }
 
 .hero-comunidad figure {
@@ -800,30 +801,32 @@ section p {
 footer {
   background-color: rgb(31, 156, 123);
   color: white;
-  padding: 30px 20px;
-  display: grid;
-  gap: 18px;
 }
-footer > div {
-  background: rgba(0, 0, 0, 0.06);
-  border-radius: 14px;
-  padding: 14px;
+
+footer h4 {
+  margin-bottom: 12px;
+  font-size: 22px;
 }
+
+footer p {
+  margin-bottom: 12px;
+  color: white;
+}
+
 footer ul {
   list-style: none;
-  margin-top: 8px;
-  display: grid;
-  gap: 6px;
+  margin: 0;
+  padding: 0;
 }
 
-.contenedor-footer {
-  display: grid;
-  gap: 6px;
+footer li {
+  margin-bottom: 8px;
 }
 
+.contenedor-footer,
 .lista-footer {
-  display: grid;
-  gap: 6px;
+  display: block;
+  gap: 0;
 }
 
 .copyright {
@@ -831,10 +834,14 @@ footer ul {
   text-align: center;
   padding: 0;
 }
+
 .copyright p {
+  margin: 0;
   opacity: 0.9;
   font-weight: 700;
+  color: white;
 }
+
 
 @media (min-width: 900px) {
   main section:nth-of-type(4) {
@@ -844,14 +851,9 @@ footer ul {
   main section:nth-of-type(4) > h2 {
     grid-column: 1/-1;
   }
-  footer {
-    grid-template-columns: repeat(4, 1fr);
-    align-items: start;
-  }
-  footer .copyright {
-    grid-column: 1/-1;
-  }
 }
+
+
 @media (max-width: 1100px) {
   .lista-foros {
     grid-template-columns: repeat(3, 1fr);
@@ -927,7 +929,7 @@ footer ul {
    FIX PLANIFICADOR (CARDS EN HORIZONTAL)
 ========================================= */
 
-.pagina-planificador .row {
+.pagina-planificador main .row {
   display: flex !important;
   flex-wrap: wrap !important;
   flex-direction: row !important;
@@ -935,11 +937,11 @@ footer ul {
   align-items: stretch !important;
 }
 
-.pagina-planificador [class*="col-"] {
+.pagina-planificador main [class*="col-"] {
   display: flex !important;
 }
 
-.pagina-planificador .card {
+.pagina-planificador main .card {
   width: 100% !important;
   max-width: none !important;
   min-width: 0 !important;
@@ -948,38 +950,36 @@ footer ul {
   flex-direction: column !important;
 }
 
-.pagina-planificador .card-img-top {
+.pagina-planificador main .card-img-top {
   width: 100% !important;
   height: 180px !important;
   object-fit: cover !important;
   display: block !important;
 }
 
-.pagina-planificador .card-body {
+.pagina-planificador main .card-body {
   display: flex !important;
   flex-direction: column !important;
   gap: 10px !important;
 }
 
-.pagina-planificador .btn {
+.pagina-planificador main .btn {
   margin-top: auto !important;
   align-self: flex-start !important;
 }
 
-.pagina-planificador .bg-light.rounded {
+.pagina-planificador main .bg-light.rounded {
   padding: 32px 24px !important;
 }
 
-/* Tablet */
 @media (max-width: 992px) {
-  .pagina-planificador .card-img-top {
+  .pagina-planificador main .card-img-top {
     height: 170px !important;
   }
 }
 
-/* Móvil */
 @media (max-width: 576px) {
-  .pagina-planificador .card-img-top {
+  .pagina-planificador main .card-img-top {
     height: 150px !important;
   }
 }

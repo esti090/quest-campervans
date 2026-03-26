@@ -983,3 +983,52 @@ footer li {
     height: 150px !important;
   }
 }
+
+/* =========================================
+   FIX BENEFICIOS (INDEX)
+========================================= */
+
+.beneficios-grid {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+}
+
+.beneficios-grid > article {
+  max-width: 300px !important;
+  width: 100% !important;
+  flex: 0 1 300px !important;
+}
+
+.card-beneficio {
+  max-width: 300px !important;
+  width: 100% !important;
+}
+
+/* FIX DEFINITIVO BENEFICIOS */
+
+.beneficios-section .beneficios-grid {
+  display: flex !important;
+  flex-direction: row !important;   /* 👈 CLAVE */
+  justify-content: center !important;
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+}
+
+.beneficios-section .beneficios-grid article {
+  flex: 0 1 300px !important;
+  max-width: 300px !important;
+}
+
+/* IGUALAR TAMAÑO DE CARDS */
+
+.beneficios-section .beneficios-grid article {
+  flex: 0 1 280px !important;
+  max-width: 280px !important;
+}
+
+.beneficios-section .card-beneficio img {
+  height: 220px;
+  object-fit: cover;
+}

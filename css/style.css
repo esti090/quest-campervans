@@ -1194,3 +1194,44 @@ main section:nth-of-type(3) .producto-card p {
     height: 200px;
   }
 }
+
+/* =========================================
+   FIX BLOG QUEST MOBILE
+========================================= */
+
+.pagina-comunidad #blog .row {
+  justify-content: center;
+}
+
+.pagina-comunidad #blog .card {
+  width: 100%;
+  height: 100%;
+}
+
+.pagina-comunidad #blog .col-12 {
+  display: flex;
+}
+
+.pagina-comunidad #blog article.card {
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .pagina-comunidad #blog .col-12 {
+    display: block;
+  }
+
+  .pagina-comunidad #blog .card {
+    width: 100%;
+  }
+
+  .pagina-comunidad #blog h3 {
+    font-size: 20px;
+  }
+
+  .pagina-comunidad #blog p {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+}

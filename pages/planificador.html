@@ -1,187 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planificador - Quest</title>
-    <!-- Bootstrap CSS v5.3.3 con SRI -->
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
           rel="stylesheet" 
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
           crossorigin="anonymous">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-   <header class="navbar navbar-expand-md navbar-light" style="background-color: rgb(31, 156, 123);">
-        <div class="container">
-            <h1 class="navbar-brand text-white">Quest Campervans</h1>
-            
-            <button class="navbar-toggler" type="button" 
-                    data-bs-toggle="collapse" data-bs-target="#mainNav"
-                    aria-controls="mainNav" aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <nav id="mainNav" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link text-white">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="alquilar_camper.html" class="nav-link text-white">Alquilar Camper</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page">Planificador</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="comunidad.html" class="nav-link text-white">Comunidad</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="siempre_contigo.html" class="nav-link text-white">Siempre contigo</a>
-                    </li>
-                </ul>
-            </nav>
+<body class="pagina-planificador">
 
-            <div class="registro">
-                <a href="#" class="btn btn-light">Registrarse</a>
+<!-- NAVBAR -->
+<header class="navbar navbar-expand-md navbar-light bg-success">
+    <div class="container">
+        <h1 class="navbar-brand text-white">Quest Campervans</h1>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav id="mainNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link text-white">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="alquilar_camper.html" class="nav-link text-white">Alquilar Camper</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Planificador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="comunidad.html" class="nav-link text-white">Comunidad</a>
+                </li>
+                <li class="nav-item">
+                    <a href="siempre_contigo.html" class="nav-link text-white">Siempre contigo</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn btn-light">Registrarse</a>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+<!-- HERO -->
+<section class="container py-5 text-center">
+    <h2>Planifica tu viaje soñado</h2>
+    <p>Rutas a medida y experiencias únicas para tu aventura.</p>
+</section>
+
+<!-- RUTAS -->
+<section class="container py-5">
+
+    <h2 class="text-center mb-4">Encuentra la ruta ideal</h2>
+
+    <!-- CARDS -->
+    <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="../img/pirineos.jpg" class="card-img-top" alt="Pirineos">
+                <div class="card-body">
+                    <h5 class="card-title">Pirineos</h5>
+                    <p class="card-text">Mapa interactivo con rutas increíbles.</p>
+                    <a href="#" class="btn btn-outline-success">Explorar rutas</a>
+                </div>
             </div>
         </div>
-    </header>
 
-
-    <main>
-        <!-- HERO -->
-    <section class="hero-planificador">
-
-        <div class="hero-texto">
-            <h1>Planifica tu viaje soñado</h1>
-            <p>Rutas a medida, herramientas útiles y consejos prácticos para una aventura 100% tuya.</p>
-
-            <a href="#ruta-ideal" class="boton boton-principal">Comenzar ahora</a>
-        </div>
-
-        <div class="hero-imagen">
-            <img src="../img/planificador hero.png" alt="Campervan al atardecer con vistas a un valle">
-        </div>
-
-    </section>
-
-
-    <!-- ENCUENTRA LA RUTA IDEAL -->
-    <section class="seccion-planificador" id="ruta-ideal">
-
-        <h2>Encuentra la ruta ideal</h2>
-        <p class="texto-pequeno">Compara tu destino para tu aventura y descubre rutas que encajan contigo.</p>
-
-        <!-- FILTROS -->
-        <div class="barra-filtros">
-
-            <div class="pestanas">
-                <button class="pestana activa" type="button">Todos</button>
-                <button class="pestana" type="button">Eléctricas</button>
-                <button class="pestana" type="button">+Híbridas</button>
-                <button class="pestana" type="button">Personalizadas</button>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="../img/ruta_cister.jpg" class="card-img-top" alt="Císter">
+                <div class="card-body">
+                    <h5 class="card-title">Ruta del Císter</h5>
+                    <p class="card-text">Itinerarios sostenibles para explorar.</p>
+                    <a href="#" class="btn btn-outline-success">Explorar rutas</a>
+                </div>
             </div>
+        </div>
 
-            <div class="selector-mapa">
-                <label for="mapa" class="oculto">Mapa</label>
-                <select id="mapa">
-                    <option>Map de España</option>
-                    <option>Portugal</option>
-                    <option>Francia</option>
-                </select>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="../img/personalizado.jpg" class="card-img-top" alt="Personalizadas">
+                <div class="card-body">
+                    <h5 class="card-title">Personalizadas</h5>
+                    <p class="card-text">Lugares únicos adaptados a ti.</p>
+                    <a href="#" class="btn btn-outline-success">Explorar rutas</a>
+                </div>
             </div>
-
         </div>
 
-        <!-- MAPA GRANDE -->
-        <div class="contenedor-mapa">
-            <img src="../img/mapa_!.png" alt="Mapa de España" class="mapa-grande">
+    </div>
+
+</section>
+
+<!-- AVENTURA -->
+<section class="container py-5 bg-light rounded">
+
+    <h2 class="text-center mb-4">Súmate a la aventura sostenible</h2>
+
+  <div class="row g-4 justify-content-center">
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="../img/camper_electrica_hibrida.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Campers eléctricas</h5>
+                    <p>Viaja sin contaminar.</p>
+                    <a href="#" class="btn btn-outline-success">Explorar</a>
+                </div>
+            </div>
         </div>
 
-        <!-- CARDS RUTAS -->
-        <div class="fila-tarjetas">
-
-            <article class="tarjeta-ruta">
-                <h3>Pirineos</h3>
-                <img src="../img/pirineos.jpg" alt="Pirineos" class="imagen-tarjeta">
-                <h4>Mapa interactivo</h4>
-                <p>Tienda, sacos, linternas...</p>
-                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
-            </article>
-
-            <article class="tarjeta-ruta">
-                <h3>Ruta del Císter</h3>
-                <img src="../img/ruta_cister.jpg" alt="Ruta del Císter" class="imagen-tarjeta">
-                <h4>Itinerarios sostenibles</h4>
-                <p>Bicicletas, tablas de surf, senderismo</p>
-                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
-            </article>
-
-            <article class="tarjeta-ruta">
-                <h3>Personalizadas</h3>
-                <img src="../img/personalizado.jpg" alt="Lugares destacados" class="imagen-tarjeta">
-                <h4>Lugares destacados</h4>
-                <p>Miradores, cascadas, playas escondidas...</p>
-                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
-            </article>
-
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="../img/extras.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Material deportivo</h5>
+                    <p>Todo lo que necesitas para tu aventura.</p>
+                    <a href="#" class="btn btn-outline-success">Explorar</a>
+                </div>
+            </div>
         </div>
 
-    </section>
-
-
-    <!-- AVENTURA SOSTENIBLE -->
-    <section class="seccion-planificador seccion-suave">
-
-        <h2>Súmate a la aventura sostenible</h2>
-        <p class="texto-pequeno">Opciones que cuidan el planeta sin complicarte el viaje.</p>
-
-        <div class="fila-tarjetas">
-
-            <article class="tarjeta-extra">
-                <img src="../img/camper_electrica_hibrida.jpg" alt="Campers eléctricas o híbridas" class="imagen-tarjeta">
-                <h3>Campers eléctricas o híbridas</h3>
-                <p>Tienda, sacos, linternas, etc.</p>
-                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
-            </article>
-
-            <article class="tarjeta-extra">
-                <img src="../img/extras.jpg" alt="Material deportivo" class="imagen-tarjeta">
-                <h3>Material deportivo</h3>
-                <p>Extras para tu ruta: bici, surf, senderismo...</p>
-                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
-            </article>
-
-            <article class="tarjeta-extra">
-                <img src="../img/plantar.jpg" alt="Reduce tu huella y planta un árbol" class="imagen-tarjeta">
-                <h3>Reduce tu huella y planta un árbol</h3>
-                <p>Campervans eléctricas +1 árbol por reserva.</p>
-                <a href="#" class="boton boton-secundario">Explorar rutas →</a>
-            </article>
-
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="../img/plantar.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Reduce tu huella</h5>
+                    <p>Planta un árbol con cada viaje.</p>
+                    <a href="#" class="btn btn-outline-success">Explorar</a>
+                </div>
+            </div>
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- CTA FINAL -->
-    <section class="cta-final">
-        <h2>¿Todo listo para tu próxima aventura?</h2>
-        <p>Vamos a trazar la ruta perfecta para ti.</p>
-        <a href="#ruta-ideal" class="boton boton-principal">Comenzar ahora →</a>
-    </section>
+</main>
 
-        
-    </main>
-
-  <footer>
-
+<!-- FOOTER -->
+<footer>
     <div>
-
         <h4>Descubre</h4>
-
         <ul class="contenedor-footer">
             <li>Nuestra flota</li>
             <li>Planificador de rutas</li>
@@ -189,50 +163,44 @@
             <li>Kits y extras</li>
             <li>Gift cards</li>
         </ul>
-
     </div>
 
     <div>
         <h4>Comunidad</h4>
-
         <ul class="lista-footer">
             <li>Foro de viajeros</li>
             <li>Historias destacadas</li>
             <li>Mapa de viajeros</li>
             <li>Eventos Quest</li>
         </ul>
-
     </div>
 
-        <div>
+    <div>
         <h4>Ayuda</h4>
-
         <ul class="lista-footer">
             <li>Preguntas frecuentes</li>
             <li>Contacto</li>
             <li>Cancelaciones</li>
             <li>Seguros</li>
         </ul>
-
     </div>
 
-    </div>
-
-        <div>
+    <div>
         <h4>Siempre contigo</h4>
-        <p>Estamos aqui para ayudarte en cada paso de tu aventura</p>
-
+        <p>Estamos aquí para ayudarte en cada paso de tu aventura</p>
         <ul class="lista lista-footer">
             <li>+34 123 456 789</li>
             <li>hola@questcampervans.com</li>
         </ul>
-
-    </div>
-    <div class="copyright"> 
-    <p>© 2025 Quest Campervans. Nos importa tu privacidad tanto como el planeta.</p>
     </div>
 
+    <div class="copyright">
+        <p>© 2025 Quest Campervans. Nos importa tu privacidad tanto como el planeta.</p>
+    </div>
 </footer>
-    
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

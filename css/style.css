@@ -397,7 +397,8 @@ main section:nth-of-type(2) > div h4 {
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
   padding: 14px;
-  width: 310px;
+  width: 100%;
+  height: 100%;
   text-align: left;
   display: flex;
   align-items: flex-start;
@@ -405,6 +406,7 @@ main section:nth-of-type(2) > div h4 {
   flex-direction: column;
   gap: 10px;
 }
+
 .tarjeta-ruta .imagen-tarjeta,
 .tarjeta-extra .imagen-tarjeta {
   border-radius: 14px;
@@ -415,7 +417,7 @@ main section:nth-of-type(2) > div h4 {
 .seccion-suave {
   background: rgba(254, 224, 185, 0.55);
   border-radius: 22px;
-  padding: 22px 0;
+  padding: 26px 24px;
   width: min(1100px, 95%);
   margin: 40px auto;
 }
@@ -921,67 +923,63 @@ footer ul {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
-/* ===== FIX BENEFICIOS INDEX ===== */
-.beneficios-section {
-  max-width: 1100px;
-  margin: 0 auto;
+/* =========================================
+   FIX PLANIFICADOR (CARDS EN HORIZONTAL)
+========================================= */
+
+.pagina-planificador .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: stretch !important;
 }
 
-.beneficios-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 18px !important;
-  align-items: start !important;
-  justify-items: center !important;
-  width: 100%;
-  margin-top: 18px;
+.pagina-planificador [class*="col-"] {
+  display: flex !important;
 }
 
-.beneficios-section .card-beneficio {
+.pagina-planificador .card {
   width: 100% !important;
-  max-width: 230px !important;
-  min-height: 300px !important;
-  margin: 0 auto !important;
-  padding: 14px !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  border-radius: 14px !important;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08) !important;
-  text-align: center !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-.beneficios-section .card-beneficio img {
+.pagina-planificador .card-img-top {
   width: 100% !important;
-  height: 120px !important;
+  height: 180px !important;
   object-fit: cover !important;
   display: block !important;
-  border-radius: 12px !important;
 }
 
-.beneficios-section .card-beneficio h3 {
-  font-size: 15px !important;
-  margin-bottom: 10px !important;
-  text-align: center !important;
+.pagina-planificador .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
 }
 
-.beneficios-section .card-beneficio p {
-  font-size: 13px !important;
-  line-height: 1.4 !important;
-  margin-bottom: 0 !important;
+.pagina-planificador .btn {
+  margin-top: auto !important;
+  align-self: flex-start !important;
 }
 
+.pagina-planificador .bg-light.rounded {
+  padding: 32px 24px !important;
+}
+
+/* Tablet */
 @media (max-width: 992px) {
-  .beneficios-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  .pagina-planificador .card-img-top {
+    height: 170px !important;
   }
 }
 
+/* Móvil */
 @media (max-width: 576px) {
-  .beneficios-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .beneficios-section .card-beneficio {
-    max-width: 260px !important;
+  .pagina-planificador .card-img-top {
+    height: 150px !important;
   }
 }

@@ -203,7 +203,8 @@ main p {
 }
 
 .fila-tarjetas {
-  margin: 0 auto;
+  width: min(1000px, 95%);
+  margin: 10px auto 0 auto;
 }
 
 /* =========================
